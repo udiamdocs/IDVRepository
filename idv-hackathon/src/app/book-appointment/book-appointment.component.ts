@@ -19,7 +19,6 @@ detailSubmited:boolean=false;
         this.dateSelected =true;
         this.storeSelected=true;
       }else if(this.route.url.indexOf('chooseDate') > 0){
-        console.log("Clicked");
         this.storeSelected=true;
         this.dateSelected =false;
       }
