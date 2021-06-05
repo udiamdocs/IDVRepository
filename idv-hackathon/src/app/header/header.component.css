@@ -1,0 +1,30 @@
+.myHeader{
+  background-color: #007B85;
+  color: white;
+}
+.navbar-brand {
+color:white;
+}
+.nav-link{
+color:white;
+}
+
+.navbar-nav{
+  margin-left: 25px;
+}
+
+
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+    color: white;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+  color: white;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: white;
+}

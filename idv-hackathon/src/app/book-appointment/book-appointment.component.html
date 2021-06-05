@@ -1,0 +1,44 @@
+<br /><br />
+<h1 style="text-align: center">BOOK AN IN STORE APPINTMENT</h1>
+<br />
+<br />
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <ul class="nav nav-pills nav-wizard">
+        <li
+          class="active"
+          role="presentation"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="storeSelected=true"
+        >
+          <a routerLink="/bookAppointment/selectStore">Select a store &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
+          <div class="nav-arrow"></div>
+        </li>
+        <li role="presentation" [ngClass]="{'active':storeSelected}" (click)="dateSelected=true">
+          <div class="nav-wedge"></div>
+          <a>Choose Date and Time</a>
+          <div class="nav-arrow"></div>
+        </li>
+        <li role="presentation"  [ngClass]="{'active':dateSelected}">
+          <div class="nav-wedge"></div>
+          <a [routerLink]="['details']">Your Details</a>
+          <div class="nav-arrow"></div>
+        </li>
+        <li role="presentation"  >
+          <div class="nav-wedge"></div>
+          <a>Confirmation</a>
+          <div class="nav-arrow"></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
