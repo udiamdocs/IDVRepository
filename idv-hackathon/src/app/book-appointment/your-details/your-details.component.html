@@ -1,29 +1,44 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-6">
-      <h3>Your Details</h3>
-      <br>
-      <div>
-        <label>First Name</label><br>
-        <input type="text" class="form-control" placeholder="First Name" />
-      </div><br>
-      <div>
-        <label>Last Name</label><br>
-        <input type="text" class="form-control" placeholder="First Name" />
-      </div><br>
-      <div>
-        <label>First Name</label><br>
-        <input type="text" class="form-control" placeholder="First Name" />
-      </div><br>
-      <div>
-        <label>First Name</label><br>
-        <input type="text" class="form-control" placeholder="First Name" />
-      </div><br>
-      <div>
-        <label>First Name</label><br>
-        <input type="text" class="form-control" placeholder="First Name" />
-      </div><br>
-    </div>
-    <div class="col-xs-6" style="background-color: blue"></div>
+    <form [formGroup]="detailsGroup" (ngSubmit)="onSubmit()">
+      <div class="col-xs-6">
+        <h3>Your Details</h3>
+        <hr class="new3">
+        <br>
+        <div>
+          <label>First Name</label><br>
+          <input type="text" class="form-control" placeholder="First Name" formControlName="firstName"/>
+        </div><br>
+        <div>
+          <label>Last Name</label><br>
+          <input type="text" class="form-control" placeholder="Last Name" formControlName="lastName"/>
+        </div><br>
+        <div>
+          <label>Telephone Number</label><br>
+          <input type="text" class="form-control" placeholder="Telephone Number" formControlName="telNumber"/>
+        </div><br>
+        <div>
+          <label>Email Address</label><br>
+          <input type="email" class="form-control" placeholder="example@example.com" formControlName="email"/>
+        </div><br>
+        <div>
+          <label>How can we help</label><br>
+          <input type="text" class="form-control" placeholder="How can we help" formControlName="canHelp"/>
+        </div><br>
+      </div>
+      <div class="col-xs-5" style="margin-left: 30px;">
+        <h3>Important Information</h3>
+        <hr class="new3">
+        <br>
+        <p style="color:#6D6E71">Once you complete the appointment booking,<br> You will be redirect to perform an ID verification process</p>
+        <br>
+        <span *ngIf="showError" style="color: red;">All Fields are required</span>
+        <br>
+        <button class="btn-primary btn-lg rounded-button" type="submit" style="background-color: #005A61; margin-right: 30px;">Continue to ID Verification</button>
+        <button class="btn-default btn-lg rounded-button" type="reset">Cancel</button>
+        <br>
+
+      </div>
+  </form>
   </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-book-appointment',
@@ -10,9 +11,24 @@ storeSelected:boolean=false;
 dateSelected:boolean=false;
 detailSubmited:boolean=false;
 
-  constructor() { }
+  constructor(private route:Router) { }
 
   ngOnInit(): void {
+    this.route.events.subscribe(()=>{
+      if(this.route.url.indexOf('details') > 0){
+        this.dateSelected =true;
+        this.storeSelected=true;
+      }else if(this.route.url.indexOf('chooseDate') > 0){
+        console.log("Clicked");
+        this.storeSelected=true;
+        this.dateSelected =false;
+      }
+      else if(this.route.url.indexOf('selectStore') > 0){
+        this.storeSelected=false;
+        this.dateSelected=false;
+      }
+    });
+
   }
 
 }

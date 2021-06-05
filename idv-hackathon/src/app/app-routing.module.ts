@@ -9,8 +9,9 @@ import { HeaderComponent } from './header/header.component';
 
 
 const routes: Routes = [
-  { path: '', component: BookAppointmentComponent},
-  { path: 'bookAppointment', component: BookAppointmentComponent, children:[
+  { path: '', component:BookAppointmentComponent},
+    { path: 'bookAppointment', component: BookAppointmentComponent, children:[
+    { path: '', component: SelectAStoreComponent },
     { path: 'selectStore', component: SelectAStoreComponent },
     { path: 'chooseDate', component: ChooseDateTimeComponent },
     { path: 'details', component: YourDetailsComponent },
