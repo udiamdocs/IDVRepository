@@ -7,12 +7,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./choose-date-time.component.css']
 })
 export class ChooseDateTimeComponent implements OnInit {
-
-  constructor(private router:Router) { }
+  stores: any[] = [
+    {"city": "Bath","location": "Stall Street","dateTime": "Friday, 4th June at 9.30am"},
+    {"city": "Bath","location": "Southgate","dateTime": "Friday, 4th June at 9.30am"}
+  ];
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
-  clicked(){
+
+  clicked() {
     this.router.navigate(['/bookAppointment/details']);
   }
 
