@@ -9,7 +9,7 @@ import { HeaderComponent } from './header/header.component';
 
 
 const routes: Routes = [
-  { path: '', component:BookAppointmentComponent},
+  { path: '', redirectTo:'bookAppointment/chooseDate', pathMatch: 'full'},
     { path: 'bookAppointment', component: BookAppointmentComponent, children:[
     { path: '', component: SelectAStoreComponent },
     { path: 'selectStore', component: SelectAStoreComponent },

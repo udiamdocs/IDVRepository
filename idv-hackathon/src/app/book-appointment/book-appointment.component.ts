@@ -7,7 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./book-appointment.component.scss']
 })
 export class BookAppointmentComponent implements OnInit {
-storeSelected:boolean=false;
+storeSelected:boolean=true;
 dateSelected:boolean=false;
 detailSubmited:boolean=false;
 

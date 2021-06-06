@@ -9,6 +9,19 @@ color:white;
 color:white;
 }
 
+.nav-item-text {
+  font-size: 22px;
+}
+
+.nav-item-text a::after {
+  background: #005A61;
+  content: '';
+  height: 2.8rem;
+  position: absolute;
+  right: 0;
+  width: 0.1rem;
+}
+
 .navbar-nav{
   margin-left: 25px;
 }
