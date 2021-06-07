@@ -15,7 +15,7 @@ const routes: Routes = [
     { path: 'selectStore', component: SelectAStoreComponent },
     { path: 'chooseDate', component: ChooseDateTimeComponent },
     { path: 'details', component: YourDetailsComponent },
-    { path: 'confirmation', component: ConfirmationComponent },
+    { path: 'confirmation', component: ConfirmationComponent }
   ]},
   { path: 'step2', component: BookAppointmentComponent }
 ];

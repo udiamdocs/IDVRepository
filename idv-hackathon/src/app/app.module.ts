@@ -10,6 +10,7 @@ import { ChooseDateTimeComponent } from './book-appointment/choose-date-time/cho
 import { YourDetailsComponent } from './book-appointment/your-details/your-details.component';
 import { ConfirmationComponent } from './book-appointment/confirmation/confirmation.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
