@@ -31,7 +31,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: node-app
-        path: .
+        path: ./idv-hackathon/
 
   deploy:
     runs-on: ubuntu-latest
@@ -51,6 +51,5 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'bth-portal1'
-        slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_357f5b056cdd4157b81b195b369ae8ca }}
-        package: .
+        package: ./idv-hackathon/
