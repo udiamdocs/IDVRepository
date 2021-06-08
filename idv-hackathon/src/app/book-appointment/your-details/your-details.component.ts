@@ -47,12 +47,10 @@ export class YourDetailsComponent implements OnInit {
         "processingFlow": "idv",
         "requestTypes": {
           "idFront": [
-            "camera",
-            "file"
+            "camera"
           ],
-          "idBack": [
-            "camera",
-            "file"
+          "faceCompare": [
+            "camera"
           ]
         },
         "sendSms": true,
